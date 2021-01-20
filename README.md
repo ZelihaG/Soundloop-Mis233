@@ -1,9 +1,9 @@
 Great appreciations for 
 @rajaprerak
-rajaprerak Prerak Raja
+Prerak Raja
 &
 @varadbhogayata
-varadbhogayata Varad Bhogayata 
+Varad Bhogayata 
 
 We used the fundamentals you create for a beat maker app
 
