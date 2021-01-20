@@ -14,7 +14,7 @@
 <ul class="messages" style="width: 600px;margin-left:400px">
     {% for message in messages %}
     <div class="alert alert-success">
-        <strong>Başarılı!</strong> {{message}}
+        <strong>Success!</strong> {{message}}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -38,21 +38,21 @@
                 <div class="details col-md-6">
                     <br>
                     <h3 class="product-title">{{songs.name}}</h3>
-                    <h6>Album: {{songs.album}}</h6>
-                    <h6>Singer: {{songs.singer}}</h6>
+                    <h6>Genre: {{songs.album}}</h6>
+                    <h6>Kit: {{songs.singer}}</h6>
                     <h6>Release Year: {{songs.year}}</h6>
                     <br>
 
                     <form method="post">
                         {% csrf_token %}
                         <button style="float: left;" type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#exampleModal" data-whatever="@mdo"><i class="fa fa-plus" aria-hidden="true"></i> Create New Playlist</button>
+                            data-target="#exampleModal" data-whatever="@mdo"><i class="fa fa-plus" aria-hidden="true"></i> Create Loop</button>
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">New Playlist</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">New Loop</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -69,7 +69,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-dismiss="modal">Close</button>
-                                        <button type="Submit" class="btn btn-primary">Create Playlist</button>
+                                        <button type="Submit" class="btn btn-primary">Create Loop</button>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                         {% csrf_token %}
                         <select style="margin-left: 10px;width: 170px;" class="btn btn-success"
                             onChange="form.submit();" name="playlist">
-                            <option selected="selected" disabled style="color: black;">Add to Playlist</option>
+                            <option selected="selected" disabled style="color: black;">Add to Loop</option>
                             {% if playlists %}
                             {% for playlist in playlists %}
                             <option value={{playlist.playlist_name}}>{{playlist.playlist_name}}</option>
