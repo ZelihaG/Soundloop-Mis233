@@ -42,6 +42,9 @@
                     <h6>Kit: {{songs.singer}}</h6>
                     <h6>Release Year: {{songs.year}}</h6>
                     <br>
+                      <audio controls autoplay >
+                     <source src="{{ songs.song_file.url }}" type="audio/mpeg">
+                    </audio>
 
                     <form method="post">
                         {% csrf_token %}
