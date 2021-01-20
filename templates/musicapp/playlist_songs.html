@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load socialaccount %}
 {% block title %} Playlist Songs {% endblock title %}
 {% block body %}
 <br>
@@ -7,7 +6,7 @@
 <ul class="messages" style="width: 600px;margin-left:400px">
   {% for message in messages %}
   <div class="alert alert-success">
-    <strong>Success!</strong> {{message}}
+    <strong>Başarılı!!</strong> {{message}}
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -41,7 +40,7 @@
       <td>{{song.album}}</td>
       <td>{{song.singer}}</td>
       <td>
-        <audio controls>
+        <audio controls autoplay>
           <source src="{{ song.song_file.url }}" type="audio/mpeg">
         </audio>
       </td>

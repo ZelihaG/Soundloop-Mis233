@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load socialaccount %}
 {% block title %} Playlist {% endblock title %}
 {% block body %}
 {% load static %}
@@ -8,9 +7,8 @@
 
   <header class="section-heading">
     <h3 class="section-title">All Playlists</h3>
-  </header><!-- sect-heading -->
+  </header>
   <hr>
-  <!-- Movie list -->
   <div class="row">
     {% if playlists %}
     {% for playlist in playlists %}
@@ -26,7 +24,7 @@
     </div>
     {% endfor %}
     {% else %}
-    <p>There isn't any playlist! First create new playlist.</p>
+    <p>Henüz bir playlist yok! İlk playlistini oluştur.</p>
     {% endif %}
   </div>
 
